@@ -13,6 +13,7 @@ RUN npm install
 COPY . .
 
 # Build the Strapi admin panel
+ENV STRAPI_ADMIN_TS_CONFIG_PATH=./tsconfig.admin.json
 RUN npm run build
 
 # Expose the Strapi port
